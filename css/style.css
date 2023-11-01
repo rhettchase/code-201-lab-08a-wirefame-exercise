@@ -29,26 +29,33 @@ main {
   }
 
 body {
-  /* font-size: 1.5em;  */
-  /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
   font-family: Arial, Helvetica, sans-serif;
   color: #222;
 }
 
+.hero {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in the width calculation */
+    /* flex-basis: 100%; */
+}
 .sub-banner {
     display: flex;
     width: 100%;
-    gap: 5px;
+    gap: 1rem;
+    box-sizing: border-box; /* Include padding in the width calculation */
 }
 
+
 .sub-banner img {
-    
-    width: 100%;
+    flex: 1; /* grow or shrink equally to fill available space */
+    max-width: calc(33.333% - 1rem); /* 1rem is subtracted to account for the gap */
 }
 
 .hero img {
-    display: flex;
-    width: 100%;
+    flex: 1; 
+    max-width: calc(100% - 1rem);
 }
