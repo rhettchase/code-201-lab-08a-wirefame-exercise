@@ -17,7 +17,7 @@ nav a {
   transition: font-size 0.25s ease;
 }
 nav a:hover {
-  font-size: x-large;
+  font-weight: 700;
 }
 
 main {
@@ -35,12 +35,31 @@ body {
   color: #222;
 }
 
+.featured {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+#featured-header {
+    /*order: 1; /* Change the order to 1, so it comes before content */
+    display: block;
+}
+#featured-content {
+    flex: 1; /* Allow the image to take up available space */
+    /* order: 2; */
+    overflow: scroll;
+    height: 15rem;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
 .hero {
     display: flex;
     align-items: center;
     width: 100%;
     box-sizing: border-box; /* Include padding in the width calculation */
-    /* flex-basis: 100%; */
+
 }
 .sub-banner {
     display: flex;
@@ -48,7 +67,6 @@ body {
     gap: 1rem;
     box-sizing: border-box; /* Include padding in the width calculation */
 }
-
 
 .sub-banner img {
     flex: 1; /* grow or shrink equally to fill available space */
@@ -58,4 +76,23 @@ body {
 .hero img {
     flex: 1; 
     max-width: calc(100% - 1rem);
+}
+
+.featured img {
+    max-width: 50%;
+    flex: 1
+}
+
+button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 0.5rem 2rem;
+    transition: 350ms ease;
+    font-size: 0.9rem;
+}
+
+button:hover {
+    background-color: aqua;
+    color: black;
 }
