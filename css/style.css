@@ -3,6 +3,10 @@ footer {
   background-color: rgb(85, 82, 82);
   height: 100px;
 }
+footer {
+    text-align: center;
+    padding-top: 2rem;
+}
 
 nav {
   display: flex;
